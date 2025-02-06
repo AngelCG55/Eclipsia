@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:paddingTop="15dp"
+    style="@style/CardContactoAuxiliarStyle"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        style="@style/CardContactoAuxiliarIconPersonaStyle"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/nombreTextView"
+            style="@style/CardContactoAuxiliarNombreTextViewStyle"
+            android:text="Nombre Auxiliar" />
+
+        <TextView
+            android:id="@+id/numeroTextView"
+            style="@style/CardContactoAuxiliarNumeroTextViewStyle"
+            android:text="1234567890" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/contactos_usuario_botonImageButton"
+        style="@style/CardContactoAuxiliarImageButtonStyle" />
+
+</LinearLayout>

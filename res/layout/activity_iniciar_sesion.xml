@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".iniciarSesion.IniciarSesionActivity">
+
+    <!-- ImageView -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/logo_nombre"
+        app:layout_constraintDimensionRatio="h,2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- LinearLayout for EditTexts -->
+
+    <!-- Button -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/botonInicioSesionAuxiliar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintVertical_bias="0.137">
+
+        <!-- EditText for Nombre -->
+        <EditText
+            android:id="@+id/editTextInicioSesionUsuario"
+            style="@style/CustomEditText"
+            android:drawableStart="@drawable/custom_nombre_icon"
+            android:hint="@string/usuario"
+            android:inputType="textPersonName"
+            android:maxLength="40"
+            android:text="angelito"/>
+
+        <!-- EditText for Contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <!-- EditText for Contraseña -->
+            <EditText
+                android:id="@+id/editTextInicioSesionContrasena"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_contrasena_icon"
+                android:drawablePadding="16dp"
+                android:hint="@string/contrasena"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:paddingEnd="16dp"
+                android:text="123"/>
+
+            <!-- CheckBox -->
+            <CheckBox
+                android:id="@+id/checkBoxInicioSesionMostrarContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:button="@drawable/image_checkbox"
+                android:padding="5dp"
+                android:text="@string/mostrar_contrasena"
+                android:theme="@style/colored_checkBox" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botonInicioSesionUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/principalA"
+        android:text="@string/incio_sesion"
+        app:layout_constraintBottom_toTopOf="@id/botonInicioSesionAuxiliar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botonInicioSesionAuxiliar"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/grisClaro"
+        android:textColor="@color/principalA"
+        android:text="@string/incio_sesion_auxiliar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

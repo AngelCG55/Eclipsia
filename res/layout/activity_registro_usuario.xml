@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuario.registro.RegistroUsuarioActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="241dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/logo_nombre"
+        app:layout_constraintDimensionRatio="h,2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/botonCrearCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- EditTexts -->
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioNombre"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_nombre_icon"
+                android:hint="@string/nombre"
+                android:inputType="textPersonName"
+                android:theme="@style/SoloTexto"
+                android:maxLength="40"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioUsuario"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_usuario_icon"
+                android:hint="@string/usuario"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioEdad"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_edad_icon"
+                android:hint="@string/edad"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioDomicilio"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_domicilio_icon"
+                android:hint="@string/domicilio"
+                android:inputType="textPostalAddress"
+                android:maxLength="100"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioDatosMedicos"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_datos_medicos_icon"
+                android:hint="@string/datos_medicos"
+                android:inputType="text"
+                android:maxLength="60"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioNumeroSeguro"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_numero_seguro_icon"
+                android:hint="@string/numero_seguro"
+                android:inputType="number"
+                android:maxLength="15"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioTelefonoCelular"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_telefono_icon"
+                android:hint="@string/telefono_celular"
+                android:inputType="phone"
+                android:digits="0123456789()+-"
+                android:maxLength="15"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioCorreoElectronico"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_correo_icon"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:maxLength="64"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioContrasena"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_contrasena_icon"
+                android:hint="@string/contrasena"
+                android:inputType="textPassword"
+                android:maxLength="18"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroUsuarioRepetirContrasena"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_contrasena_icon"
+                android:hint="@string/repetir_contrasena"
+                android:inputType="textPassword"
+                android:maxLength="18"/>
+
+            <!-- CheckBox para mostrar/ocultar contraseña -->
+            <CheckBox
+                android:id="@+id/checkBox_registro_usuario_MostrarContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mostrar_contrasena"
+                android:layout_gravity="end"/>
+
+            <!-- Agrega más EditText según sea necesario -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/botonCrearCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/principalA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auxiliar.datosAuxiliar.DatosAuxiliarActivity">
+
+        <!-- Imágenes -->
+        <ImageView
+            android:id="@+id/datosAuxiliar_imagenAncha"
+            android:layout_width="0dp"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagen_portada_prueba_b"
+            app:layout_constraintDimensionRatio="1:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/datosAuxiliar_imagenRedonda"
+            android:layout_width="187dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/imagen_perfil_prueba"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/datosAuxiliar_imagenAncha" />
+
+        <!-- EditTexts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/datosAuxiliar_imagenRedonda"
+            app:layout_constraintBottom_toTopOf="@id/botonEditarCuentaAuxiliar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+                <EditText
+                    android:id="@+id/datosAuxiliar_editTextRegistroAuxiliarUsuario"
+                    style="@style/CustomEditText"
+                    android:drawableStart="@drawable/custom_usuario_icon"
+                    android:hint="@string/usuario"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:enabled="false"
+                    android:text="USUARIO_PRUEBA"/>
+                <EditText
+                    android:id="@+id/datosAuxiliar_editTextRegistroAuxiliarNombre"
+                    style="@style/CustomEditText"
+                    android:drawableStart="@drawable/custom_nombre_icon"
+                    android:hint="@string/nombre"
+                    android:inputType="textPersonName"
+                    android:maxLength="40"
+                    android:theme="@style/SoloTexto"
+                    android:enabled="false"
+                    android:text="NOMBRE PRUEBA"/>
+
+
+
+                <EditText
+                    android:id="@+id/datosAuxiliar_editTextRegistroAuxiliarDomicilio"
+                    style="@style/CustomEditText"
+                    android:drawableStart="@drawable/custom_domicilio_icon"
+                    android:hint="@string/domicilio"
+                    android:inputType="textPostalAddress"
+                    android:maxLength="100"
+                    android:enabled="false"
+                    android:text="DOMICILIO PRUEBA"/>
+
+                <EditText
+                    android:id="@+id/datosAuxiliar_editTextRegistroAuxiliarCorreoElectronico"
+                    style="@style/CustomEditText"
+                    android:drawableStart="@drawable/custom_correo_icon"
+                    android:hint="@string/correo"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="64"
+                    android:enabled="false"
+                    android:text="CORREOPRUEBA@PRUEBA.COM"/>
+
+                <EditText
+                    android:id="@+id/datosAuxiliar_editTextRegistroAuxiliarTelefonoCelular"
+                    style="@style/CustomEditText"
+                    android:digits="0123456789()+-"
+                    android:drawableStart="@drawable/custom_telefono_icon"
+                    android:hint="@string/telefono_celular"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:enabled="false"
+                    android:text="12345678910"/>
+
+                <EditText
+                    android:id="@+id/datosAuxiliar_editTextRegistroAuxiliarContrasena"
+                    style="@style/CustomEditText"
+                    android:drawableStart="@drawable/custom_contrasena_icon"
+                    android:hint="@string/contrasena"
+                    android:text="contraA123@"
+                    android:inputType="textPassword"
+                    android:maxLength="18"
+                    android:enabled="false"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/botonEditarCuentaAuxiliar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/editar_cuenta_auxiliar"
+            app:layout_constraintBottom_toTopOf="@id/datosAuxiliar_btnCerrarSesion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/principalA" />
+        <Button
+            android:id="@+id/datosAuxiliar_btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cerrar_sesion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/rojoEmergencia" />
+</androidx.constraintlayout.widget.ConstraintLayout>

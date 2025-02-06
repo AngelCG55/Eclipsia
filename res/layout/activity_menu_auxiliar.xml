@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".auxiliar.menuAuxiliar.MenuAuxiliarActivity">
+
+    <ImageView
+        android:layout_width="302dp"
+        android:layout_height="101dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo_nombre_horizontal_b"
+        android:layout_marginTop="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/menuAuxiliarScrollViewLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="12dp">
+
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/menuAuxiliar_btnAgregarUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar_usuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="4dp"
+        android:backgroundTint="@color/terciarioD" />
+    <Button
+        android:id="@+id/btn_menu_auxiliar_mis_datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/terciarioC"
+        android:textColorHint="@color/principalA"
+        android:text="@string/menuAuxiliarMisDatos"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/white" />
+
+</LinearLayout>

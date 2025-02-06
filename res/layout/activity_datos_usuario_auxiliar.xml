@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auxiliar.datosUsuarioAuxiliar.DatosUsuarioAuxiliarActivity">
+
+    <!-- Imágenes -->
+    <ImageView
+        android:id="@+id/datosUsuarioAuxiliar_imagenAncha"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen_portada_usuarios"
+        app:layout_constraintDimensionRatio="1:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/datosUsuarioAuxiliar_imagenRedonda"
+        android:layout_width="187dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/imagen_perfil_usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/datosUsuarioAuxiliar_imagenAncha" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintBottom_toTopOf="@id/datosUsuarioAuxiliar_botonEditarCuentaAuxiliar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datosUsuarioAuxiliar_imagenAncha"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- EditTexts -->
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioUsuario"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_usuario_icon"
+                android:hint="@string/usuario"
+                android:inputType="text"
+                android:enabled="false"
+                android:maxLength="20"
+                android:text="USUARIO_PRUEBA" />
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioNombre"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_nombre_icon"
+                android:hint="@string/nombre"
+                android:inputType="textPersonName"
+                android:theme="@style/SoloTexto"
+                android:enabled="false"
+                android:maxLength="40"
+                android:text="NOMBRE PRUEBA" />
+
+
+
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioEdad"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_edad_icon"
+                android:hint="@string/edad"
+                android:inputType="number"
+                android:enabled="false"
+                android:maxLength="2"
+                android:text="18" />
+
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioDomicilio"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_domicilio_icon"
+                android:hint="@string/domicilio"
+                android:inputType="textPostalAddress"
+                android:enabled="false"
+                android:maxLength="100"
+                android:text="DOMICILIO PRUEBA" />
+
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioDatosMedicos"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_datos_medicos_icon"
+                android:hint="@string/datos_medicos"
+                android:inputType="text"
+                android:enabled="false"
+                android:maxLength="60"
+                android:text="DATOS MÉDICOS PRUEBA" />
+
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioNumeroSeguro"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_numero_seguro_icon"
+                android:hint="@string/numero_seguro"
+                android:inputType="number"
+                android:enabled="false"
+                android:maxLength="15"
+                android:text="NÚMERO DE SEGURO PRUEBA" />
+
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioTelefonoCelular"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_telefono_icon"
+                android:hint="@string/telefono_celular"
+                android:inputType="phone"
+                android:digits="0123456789()+-"
+                android:enabled="false"
+                android:maxLength="15"
+                android:text="5515515555" />
+
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioCorreoElectronico"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_correo_icon"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:enabled="false"
+                android:maxLength="64"
+                android:text="CORREO@PRUEBA.COM" />
+
+            <EditText
+                android:id="@+id/datosUsuarioAuxiliar_usuarioContrasena"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_contrasena_icon"
+                android:hint="@string/contrasena"
+                android:inputType="textPassword"
+                android:enabled="false"
+                android:maxLength="18"
+                android:text="contraA123@" />
+
+            <!-- Agrega más EditText según sea necesario -->
+
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/datosUsuarioAuxiliar_botonEditarCuentaAuxiliar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/editar_usuario"
+        app:layout_constraintBottom_toTopOf="@id/datosUsuarioAuxiliar_btnContactar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/principalA" />
+
+    <Button
+        android:id="@+id/datosUsuarioAuxiliar_btnContactar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contactar"
+        app:layout_constraintBottom_toTopOf="@id/datosUsuarioAuxiliar_btnUbicacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/terciarioC" />
+
+    <Button
+        android:id="@+id/datosUsuarioAuxiliar_btnUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ubicación"
+        app:layout_constraintBottom_toTopOf="@id/datosUsuarioAuxiliar_btnEliminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/terciarioA" />
+
+    <Button
+        android:id="@+id/datosUsuarioAuxiliar_btnEliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/rojoEmergencia" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

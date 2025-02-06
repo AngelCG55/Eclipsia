@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuario.datosUsuario.DatosUsuarioActivity">
+
+    <ImageView
+        android:id="@+id/datosUsuario_imagenAncha"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen_portada_usuarios"
+        app:layout_constraintDimensionRatio="1:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/datosUsuario_imagenRedonda"
+        android:layout_width="187dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/imagen_perfil_usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/datosUsuario_imagenAncha" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintBottom_toTopOf="@id/datosUsuario_btnCerrarSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datosUsuario_imagenAncha"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TextViews -->
+            <TextView
+                android:id="@+id/datosUsuario_usuarioUsuario"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_usuario_icon"
+                android:text="USUARIO_PRUEBA" />
+            <TextView
+                android:id="@+id/datosUsuario_usuarioNombre"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_nombre_icon"
+                android:text="NOMBRE PRUEBA" />
+
+
+
+            <TextView
+                android:id="@+id/datosUsuario_usuarioEdad"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_edad_icon"
+                android:text="18" />
+
+            <TextView
+                android:id="@+id/datosUsuario_usuarioDomicilio"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_domicilio_icon"
+                android:text="DOMICILIO PRUEBA" />
+
+            <TextView
+                android:id="@+id/datosUsuario_usuarioDatosMedicos"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_datos_medicos_icon"
+                android:text="DATOS MÉDICOS PRUEBA" />
+
+            <TextView
+                android:id="@+id/datosUsuario_usuarioNumeroSeguro"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_numero_seguro_icon"
+                android:text="NÚMERO DE SEGURO PRUEBA" />
+
+            <TextView
+                android:id="@+id/datosUsuario_usuarioTelefonoCelular"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_telefono_icon"
+                android:text="5515515555" />
+
+            <TextView
+                android:id="@+id/datosUsuario_usuarioCorreoElectronico"
+                style="@style/CustomTextView"
+                android:drawableStart="@drawable/custom_correo_icon"
+                android:text="CORREO@PRUEBA.COM" />
+
+
+
+            <!-- Agrega más TextView según sea necesario -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+    <Button
+        android:id="@+id/datosUsuario_btnCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cerrar_sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        android:backgroundTint="@color/rojoEmergencia" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

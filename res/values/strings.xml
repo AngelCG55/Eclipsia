@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Eclipsia</string>
+    <string name="empresa">SoftLife</string>
+
+    <!--USUARIOS-->
+    <string name="auxiliar">Auxiliar</string>
+
+    <!--BOTONES-->
+    <string name="incio_sesion">Iniciar Sesión</string>
+    <string name="incio_sesion_auxiliar">Iniciar Sesión Auxiliar</string>
+    <string name="registro_cuenta">Crear Cuenta</string>
+
+    <string name="registro_cuenta_auxiliar">Crear Cuenta Auxiliar</string>
+    <string name="editar_cuenta_auxiliar">Editar Cuenta Auxiliar</string>Cerrar Sesión
+    <string name="guardar_datos_auxiliar">Guardar Datos Auxiliar</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="agregar_usuario">Agregar Persona</string>
+    <string name="editar_usuario">Editar cuenta auxiliar</string>
+
+
+    <string name="nombre">Nombre</string>
+    <string name="usuario">Usuario</string>
+    <string name="edad">Edad</string>
+    <string name="numero_seguro">Número de Seguro</string>
+    <string name="domicilio">Domicilio</string>
+    <string name="datos_medicos">Datos Médicos</string>
+    <string name="telefono_celular">Teléfono Celular</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="repetir_contrasena">Repetir Contraseña</string>
+    <string name="correo">Correo Electrónico</string>
+
+    <string name="mostrar_contrasena">Mostrar Contraseña</string>
+
+    <string name="menuAuxiliarMisDatos">Mis Datos</string>
+
+    <string name="urlAPI">fc46-189-133-52-226.ngrok-free.app</string>
+
+
+</resources>

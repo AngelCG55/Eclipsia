@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auxiliar.registro.RegistroAuxiliarActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="241dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/logo_nombre"
+        app:layout_constraintDimensionRatio="h,2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@id/botonCrearCuentaAuxiliar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <!-- EditTexts -->
+            <EditText
+                android:id="@+id/editTextRegistroAuxiliarNombre"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_nombre_icon"
+                android:hint="@string/nombre"
+                android:inputType="textPersonName"
+                android:theme="@style/SoloTexto"
+                android:maxLength="40"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroAuxiliarUsuario"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_usuario_icon"
+                android:hint="@string/usuario"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroAuxiliarDomicilio"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_domicilio_icon"
+                android:hint="@string/domicilio"
+                android:inputType="textPostalAddress"
+                android:maxLength="100"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroAuxiliarCorreoElectronico"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_correo_icon"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:maxLength="64"/>
+            <EditText
+                android:id="@+id/editTextRegistroAuxiliarTelefonoCelular"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_telefono_icon"
+                android:hint="@string/telefono_celular"
+                android:inputType="phone"
+                android:digits="0123456789()+-"
+                android:maxLength="15"/>
+            <EditText
+                android:id="@+id/editTextRegistroAuxiliarContrasena"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_contrasena_icon"
+                android:hint="@string/contrasena"
+                android:inputType="textPassword"
+                android:maxLength="18"/>
+
+            <EditText
+                android:id="@+id/editTextRegistroAuxiliarConfirmarContrasena"
+                style="@style/CustomEditText"
+                android:drawableStart="@drawable/custom_contrasena_icon"
+                android:hint="@string/repetir_contrasena"
+                android:inputType="textPassword"
+                android:maxLength="18"/>
+            <!-- CheckBox para mostrar u ocultar la contraseña -->
+            <CheckBox
+                android:id="@+id/checkBoxRegistroAuxiliarMostrarContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mostrar_contrasena"
+                android:layout_gravity="end"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/botonCrearCuentaAuxiliar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_cuenta_auxiliar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/secundarioA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

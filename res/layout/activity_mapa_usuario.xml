@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuario.mapaUsuario.MapaUsuarioActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mapa_usuario_btnEmergencia">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Primera parte, 65% de la pantalla -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="580dp"
+                android:background="@android:color/holo_red_light"
+                android:orientation="vertical">
+                <fragment
+                    android:id="@+id/mapView"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+                <!-- Aquí va el mapa -->
+
+            </LinearLayout>
+
+            <!-- Segunda parte, 35% de la pantalla (por defecto), pero ocupa el 100% al desplazarse -->
+            <!-- AQUI QUIERO MOSTRAR LO QUE VE LA CAMARA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_weight="0"
+                android:background="@android:color/holo_green_light"
+                android:orientation="vertical">
+
+
+                <SurfaceView
+                    android:id="@+id/cameraPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <!-- Aquí puedes colocar el contenido de la segunda parte -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <ImageButton
+
+        android:id="@+id/mapa_usuario_btnEmergencia"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/card_contacto_emergencia"
+        android:src="@drawable/icon_emergencia"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
